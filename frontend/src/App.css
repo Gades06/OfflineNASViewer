@@ -1,0 +1,133 @@
+.app {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.path-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.path-nav button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.path-nav button:disabled {
+  background: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.path-nav button:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.current-path {
+  font-family: monospace;
+  background: rgba(255,255,255,0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #e74c3c;
+  background: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.file-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+.file-item.directory {
+  cursor: pointer;
+}
+
+.file-item.directory:hover {
+  border-color: #3498db;
+  background: #f8f9fa;
+}
+
+.file-icon {
+  font-size: 2rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.file-info {
+  flex: 1;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #2c3e50;
+}
+
+.file-details {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.empty-message {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 3rem;
+}
